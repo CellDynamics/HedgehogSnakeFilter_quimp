@@ -41,6 +41,9 @@ import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
 public class HedgehogSnakeFilter_ extends QWindowBuilder
         implements IQuimpPoint2dFilter, IQuimpPluginSynchro, ChangeListener, ActionListener {
 
+    static {
+        System.setProperty("log4j.configurationFile", "hedgehogfilterlog4j2.xml");
+    }
     private static final Logger LOGGER = LogManager.getLogger(HedgehogSnakeFilter_.class.getName());
 
     private List<Point2d> points;
