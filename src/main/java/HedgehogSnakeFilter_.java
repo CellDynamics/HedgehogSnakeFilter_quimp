@@ -92,7 +92,7 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
     @Override
     public String getVersion() {
         LOGGER.trace("getVersion of Plugin1 called");
-        return "1.0.0";
+        return "1.0.1-SNAPSHOT";
     }
 
     /**
