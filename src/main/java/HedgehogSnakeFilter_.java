@@ -48,7 +48,7 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
 
     private List<Point2d> points;
     private ViewUpdater qcontext;
-    private ParamList uiDefinition; //!< Definition of UI for this plugin
+    private ParamList uiDefinition; /*!< Definition of UI for this plugin */
     private int every; // every point to delete
 
     /**
@@ -73,14 +73,21 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
 
     @Override
     public void setPluginConfig(final ParamList par) throws QuimpPluginException {
-        LOGGER.trace("setPluginConfig of Plugin1 called");
+        try {
+            every = par.getIntValue("every");
+            setValues(par); // populate loaded values to UI
+        } catch (Exception e) {
+            // we should never hit this exception as parameters are not touched
+            // by caller they are only passed to configuration saver and
+            // restored from it
+            throw new QuimpPluginException("Wrong input argument-> " + e.getMessage(), e);
+        }
 
     }
 
     @Override
     public ParamList getPluginConfig() {
-        LOGGER.trace("getPluginConfig of Plugin1 called");
-        return null;
+        return getValues();
     }
 
     @Override
