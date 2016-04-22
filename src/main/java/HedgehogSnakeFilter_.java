@@ -168,4 +168,10 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
         }
     }
 
+    @Override
+    public String about() {
+        return "This plugin is intended for testing purposes only\nAuthor: Piotr Baniukiewicz"
+                + "\nmail: p.baniukiewicz@warwick.ac.uk";
+    }
+
 }
