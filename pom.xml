@@ -9,11 +9,11 @@
   </parent>
   <!-- Project's coordinates -->
   <groupId>uk.ac.warwick.wsbc</groupId>
-  <artifactId>HedgehogSnakeFilter_quimp</artifactId>
+  <artifactId>HedgehogSnakeFilter-quimp</artifactId>
   <packaging>jar</packaging>
   <version>1.0.1</version>
   <!-- Name and licencing and other project informations -->
-  <name>HedgehogSnakeFilter_quimp</name>
+  <name>HedgehogSnakeFilter-quimp</name>
  <build>
     <plugins>
       <plugin>
