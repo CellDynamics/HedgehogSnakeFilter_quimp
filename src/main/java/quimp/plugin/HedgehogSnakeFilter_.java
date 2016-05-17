@@ -3,6 +3,7 @@
  * @file HedgehogSnakeFilter_.java
  * @date 14 Mar 2016
  */
+package quimp.plugin;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
