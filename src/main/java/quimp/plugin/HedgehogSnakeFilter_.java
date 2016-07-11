@@ -18,6 +18,7 @@ import javax.vecmath.Vector2d;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
 
 import uk.ac.warwick.wsbc.QuimP.ViewUpdater;
 import uk.ac.warwick.wsbc.QuimP.plugin.IQuimpPluginSynchro;
@@ -43,7 +44,10 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
         implements IQuimpPoint2dFilter, IQuimpPluginSynchro, ChangeListener, ActionListener {
 
     static {
-        System.setProperty("log4j.configurationFile", "hedgehogfilterlog4j2.xml");
+        if (System.getProperty("quimp.debugLevel") == null)
+            Configurator.initialize(null, "log4j2_default.xml");
+        else
+            Configurator.initialize(null, System.getProperty("quimp.debugLevel"));
     }
     private static final Logger LOGGER = LogManager.getLogger(HedgehogSnakeFilter_.class.getName());
 
