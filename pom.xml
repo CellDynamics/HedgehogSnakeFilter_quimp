@@ -4,21 +4,21 @@
     <groupId>uk.ac.warwick.wsbc</groupId>
     <artifactId>pom-quimp-plugin</artifactId>
     <version>16.10.01</version>
-    <relativePath/>
+    <relativePath />
     <!-- http://stackoverflow.com/questions/6003831/parent-relativepath-points-at-my-com-mycompanymyproject-instead-of-org-apache -->
   </parent>
   <!-- Project's coordinates -->
   <groupId>uk.ac.warwick.wsbc</groupId>
   <artifactId>HedgehogSnakeFilter-quimp</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.0.3</version>
   <!-- Name and licencing and other project informations -->
   <name>HedgehogSnakeFilter-quimp</name>
   <scm>
     <connection>scm:git:file://localhost/home/baniuk/Documents/Repos/HedgehogSnakeFilter-quimp</connection>
     <developerConnection>scm:git:file://localhost/home/baniuk/Documents/Repos/HedgehogSnakeFilter-quimp</developerConnection>
     <url>http://www.trac-wsbc.linkpc.net:8080/cgit/HedgehogSnakeFilter-quimp.git/</url>
-    <tag>HEAD</tag>
+    <tag>v1.0.3</tag>
   </scm>
   <issueManagement>
     <system>Trac</system>
