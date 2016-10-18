@@ -24,7 +24,7 @@ import uk.ac.warwick.wsbc.QuimP.ViewUpdater;
 import uk.ac.warwick.wsbc.QuimP.plugin.IQuimpPluginSynchro;
 import uk.ac.warwick.wsbc.QuimP.plugin.ParamList;
 import uk.ac.warwick.wsbc.QuimP.plugin.QuimpPluginException;
-import uk.ac.warwick.wsbc.QuimP.plugin.snakes.IQuimpPoint2dFilter;
+import uk.ac.warwick.wsbc.QuimP.plugin.snakes.IQuimpBOAPoint2dFilter;
 import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
 
 /**
@@ -41,7 +41,7 @@ import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
  *
  */
 public class HedgehogSnakeFilter_ extends QWindowBuilder
-        implements IQuimpPoint2dFilter, IQuimpPluginSynchro, ChangeListener, ActionListener {
+        implements IQuimpBOAPoint2dFilter, IQuimpPluginSynchro, ChangeListener, ActionListener {
 
     static {
         if (System.getProperty("quimp.debugLevel") == null)
