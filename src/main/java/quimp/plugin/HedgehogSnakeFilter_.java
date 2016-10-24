@@ -16,9 +16,8 @@ import javax.swing.event.ChangeListener;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.Configurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import uk.ac.warwick.wsbc.QuimP.ViewUpdater;
 import uk.ac.warwick.wsbc.QuimP.plugin.IQuimpPluginSynchro;
@@ -30,8 +29,8 @@ import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
 /**
  * Dummy test class emulates SNAKE plugin for QuimP
  * 
- * This filter moves \a i-th node by distance equal to distance between \a i-1 and \a i+1
- * node. Effect is visible if Node Spacing in segmentation is around 2 
+ * This filter moves \a i-th node by distance equal to distance between \a i-1 and \a i+1 node.
+ * Effect is visible if Node Spacing in segmentation is around 2
  * 
  * To use this plugin one has to modify path with plugins in BOA call.
  * 
@@ -43,13 +42,7 @@ import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
 public class HedgehogSnakeFilter_ extends QWindowBuilder
         implements IQuimpBOAPoint2dFilter, IQuimpPluginSynchro, ChangeListener, ActionListener {
 
-    static {
-        if (System.getProperty("quimp.debugLevel") == null)
-            Configurator.initialize(null, "log4j2_default.xml");
-        else
-            Configurator.initialize(null, System.getProperty("quimp.debugLevel"));
-    }
-    private static final Logger LOGGER = LogManager.getLogger(HedgehogSnakeFilter_.class.getName());
+    static final Logger LOGGER = LoggerFactory.getLogger(HedgehogSnakeFilter_.class.getName());
 
     private List<Point2d> points;
     private ViewUpdater qcontext;
