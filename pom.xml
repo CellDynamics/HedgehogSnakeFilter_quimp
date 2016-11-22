@@ -11,14 +11,14 @@
   <groupId>uk.ac.warwick.wsbc</groupId>
   <artifactId>HedgehogSnakeFilter-quimp</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.4</version>
+  <version>1.0.5-SNAPSHOT</version>
   <!-- Name and licencing and other project informations -->
   <name>HedgehogSnakeFilter-quimp</name>
   <scm>
     <connection>scm:git:file://localhost/home/baniuk/Documents/Repos/HedgehogSnakeFilter-quimp</connection>
     <developerConnection>scm:git:file://localhost/home/baniuk/Documents/Repos/HedgehogSnakeFilter-quimp</developerConnection>
     <url>http://www.trac-wsbc.linkpc.net:8080/cgit/HedgehogSnakeFilter-quimp.git/</url>
-    <tag>v1.0.4</tag>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>Trac</system>
