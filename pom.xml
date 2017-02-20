@@ -3,27 +3,56 @@
   <parent>
     <groupId>uk.ac.warwick.wsbc</groupId>
     <artifactId>pom-quimp-plugin</artifactId>
-    <version>17.01.01</version>
-    <relativePath />
+    <version>17.02.05-SNAPSHOT</version>
+    <relativePath/>
     <!-- http://stackoverflow.com/questions/6003831/parent-relativepath-points-at-my-com-mycompanymyproject-instead-of-org-apache -->
   </parent>
   <!-- Project's coordinates -->
   <groupId>uk.ac.warwick.wsbc</groupId>
   <artifactId>HedgehogSnakeFilter-quimp</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.6</version>
+  <version>1.0.7-SNAPSHOT</version>
   <!-- Name and licencing and other project informations -->
   <name>HedgehogSnakeFilter-quimp</name>
+  <url>www.warwick.ac.uk/quimp</url>
+  <inceptionYear>2015</inceptionYear>
+  <description>QuimP BOA plugin</description>
+  <organization>
+    <name>Department of Computer Science, University of Warwick</name>
+    <url>http://www2.warwick.ac.uk/fac/sci/dcs/</url>
+  </organization>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <license.licenseName>QuimP License</license.licenseName>
+    <license.copyrightOwners>University of Warwick</license.copyrightOwners>
+    <license.url>http://pilip.lnx.warwick.ac.uk/LICENSE.txt</license.url>
+  </properties>
+  <licenses>
+    <license>
+      <name>${license.licenseName}</name>
+      <url>${license.url}</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <scm>
-    <connection>scm:git:file://localhost/home/baniuk/Documents/Repos/HedgehogSnakeFilter-quimp</connection>
-    <developerConnection>scm:git:file://localhost/home/baniuk/Documents/Repos/HedgehogSnakeFilter-quimp</developerConnection>
-    <url>http://www.trac-wsbc.linkpc.net:8080/cgit/HedgehogSnakeFilter-quimp.git/</url>
-    <tag>v1.0.6</tag>
+    <connection>scm:git:https://github.com/CellDynamics/HedgehogSnakeFilter_quimp.git</connection>
+    <developerConnection>scm:git:https://github.com/CellDynamics/HedgehogSnakeFilter_quimp.git</developerConnection>
+    <url>https://github.com/CellDynamics/HedgehogSnakeFilter_quimp</url>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
-    <system>Trac</system>
-    <url>http://www.trac-wsbc.linkpc.net:8080/trac/QuimP/</url>
+    <system>GitHub</system>
+    <url>https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/issues/</url>
   </issueManagement>
+  <ciManagement>
+    <system>None</system>
+  </ciManagement>
+  <mailingLists>
+    <mailingList>
+      <name>N/A</name>
+      <archive>N/A</archive>
+    </mailingList>
+  </mailingLists>
   <developers>
     <developer>
       <id>pbaniukiewicz</id>
@@ -31,19 +60,27 @@
       <email>p.baniukiewicz@warwick.ac.uk</email>
       <organization>University of Warwick</organization>
       <roles>
+        <role>lead</role>
         <role>developer</role>
-        <role>researcher</role>
+        <role>support</role>
+        <role>reviewer</role>
+        <role>maintainer</role>
       </roles>
       <timezone>London</timezone>
     </developer>
   </developers>
+  <contributors>
+    <contributor>
+      <name>Piotr Baniukiewicz</name>
+      <email>p.baniukiewicz@warwick.ac.uk</email>
+      <organization>University of Warwick</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>London</timezone>
+    </contributor>
+  </contributors>
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -59,5 +96,31 @@
       </plugin>
     </plugins>
   </build>
-  <reporting />
+  <dependencies>
+    <dependency>
+      <groupId>uk.ac.warwick.wsbc</groupId>
+      <artifactId>QuimP_</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.scijava</groupId>
+      <artifactId>scijava-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
+  <reporting/>
 </project>
