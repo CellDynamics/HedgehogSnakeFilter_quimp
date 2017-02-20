@@ -19,13 +19,13 @@ import org.scijava.vecmath.Vector2d;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import uk.ac.warwick.wsbc.QuimP.PropertyReader;
-import uk.ac.warwick.wsbc.QuimP.ViewUpdater;
-import uk.ac.warwick.wsbc.QuimP.plugin.IQuimpPluginSynchro;
-import uk.ac.warwick.wsbc.QuimP.plugin.ParamList;
-import uk.ac.warwick.wsbc.QuimP.plugin.QuimpPluginException;
-import uk.ac.warwick.wsbc.QuimP.plugin.snakes.IQuimpBOAPoint2dFilter;
-import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
+import uk.ac.warwick.wsbc.quimp.PropertyReader;
+import uk.ac.warwick.wsbc.quimp.ViewUpdater;
+import uk.ac.warwick.wsbc.quimp.plugin.IQuimpPluginSynchro;
+import uk.ac.warwick.wsbc.quimp.plugin.ParamList;
+import uk.ac.warwick.wsbc.quimp.plugin.QuimpPluginException;
+import uk.ac.warwick.wsbc.quimp.plugin.snakes.IQuimpBOAPoint2dFilter;
+import uk.ac.warwick.wsbc.quimp.plugin.utils.QWindowBuilder;
 
 /**
  * Dummy test class emulates SNAKE plugin for QuimP
@@ -36,8 +36,6 @@ import uk.ac.warwick.wsbc.QuimP.plugin.utils.QWindowBuilder;
  * To use this plugin one has to modify path with plugins in BOA call.
  * 
  * @author p.baniukiewicz
- * @date 17 Feb 2016
- * @date 4 Mar 2016 Plugin does something useful
  *
  */
 public class HedgehogSnakeFilter_ extends QWindowBuilder
@@ -90,9 +88,10 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
     }
 
     @Override
-    public void showUI(boolean val) {
+    public int showUI(boolean val) {
         LOGGER.trace("showUI of Plugin1 called with val " + val);
         toggleWindow(val);
+        return 0;
     }
 
     @Override
