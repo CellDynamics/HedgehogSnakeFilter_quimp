@@ -88,7 +88,7 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
     }
 
     @Override
-    public int showUI(boolean val) {
+    public int showUi(boolean val) {
         LOGGER.trace("showUI of Plugin1 called with val " + val);
         toggleWindow(val);
         return 0;
