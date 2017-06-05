@@ -1,5 +1,11 @@
 # Change Log
 
+## [v1.0.9](https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/tree/v1.0.9) (2017-06-05)
+[Full Changelog](https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/compare/v1.0.8...v1.0.9)
+
+## [v1.0.8](https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/tree/v1.0.8) (2017-05-26)
+[Full Changelog](https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/compare/v1.0.7...v1.0.8)
+
 ## [v1.0.7](https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/tree/v1.0.7) (2017-03-14)
 [Full Changelog](https://github.com/CellDynamics/HedgehogSnakeFilter_quimp/compare/v1.0.6...v1.0.7)
 
