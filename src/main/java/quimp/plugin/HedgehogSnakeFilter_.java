@@ -58,7 +58,7 @@ public class HedgehogSnakeFilter_ extends QWindowBuilder
     // configure window, names of UI elements are also names of variables
     // exported/imported by set/getPluginConfig
     uiDefinition.put("name", "testDelete"); // name of window
-    uiDefinition.put("every", "spinner, 1, 100, 1," + Integer.toString(every));
+    uiDefinition.put("every", "spinner: 1: 100: 1:" + Integer.toString(every));
     buildWindow(uiDefinition); // construct ui (not shown yet)
   }
 
